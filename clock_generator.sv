@@ -12,9 +12,9 @@ initial
         clk25=1'b0;
         rst=1'b0;
     end
-always #5 clk= ~clk;//100MHZ
-always #10 clk2=~clk2;//50MHZ
-always #20 clk3=~clk3;//25MHZ
+always #5 clk= ~clk100;//100MHZ
+always #10 clk2=~clk50;//50MHZ
+always #20 clk3=~clk25;//25MHZ
 initial begin
     $dumpfile("sim.vcd");
     $dumpvars;
@@ -24,5 +24,6 @@ initial begin
     $finish();// as it will run forever we need to end it.
 end
 endmodule
+
 
     
